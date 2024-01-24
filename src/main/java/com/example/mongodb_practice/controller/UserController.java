@@ -16,8 +16,8 @@ public class UserController {
     }
 
     @GetMapping("/user/{id}")
-    public User getUserByName(@RequestParam String id) {
-        return userService.getUserById(id);
+    public String getUserIdByUserName(@RequestParam String id) {
+        return userService.getUserIdByUserName(id);
     }
 
     @GetMapping("/user")

@@ -14,8 +14,8 @@ public class UserService {
 
     private UserRepository userRepository;
 
-    public User getUserById(String id) {
-        return userRepository.findById(id).orElseThrow(IllegalAccessError::new);
+    public String getUserIdByUserName(String id) {
+        return userRepository.findById(id).orElseThrow(IllegalAccessError::new).getId();
     }
 
     public List<User> getAllUser() {
